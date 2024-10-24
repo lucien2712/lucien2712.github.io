@@ -7,7 +7,7 @@
 
     
 
-    <title>Archives | Cheng-Yen Lee&#39;s RD Page</title>
+    <title>testtest | Cheng-Yen Lee&#39;s RD Page</title>
     <meta name="author" content="Cheng-Yen Lee" />
     <meta name="keywords" content="" />
     <meta name="description" content="" />
@@ -74,6 +74,8 @@
 
         
         
+        
+        
 
         
         <div class="author-meta">
@@ -126,106 +128,33 @@
 
         <div id="content" class="content">
             <div id="wrapper" class="wrapper" style="max-width: 800px">
-                
-
-
+                <article class="article" itemscope itemprop="blogPost">
     
-    
-    
-    
-    
-    <section class="archives-wrap">
-    <div class="archive-year-wrap">
-    <a href="/archives/2024" class="page-hd">
-        2024
-    </a>
-    </div>
-    <ol class="archives">
-    
-
-    <li class="archive-section-item">
+    <header class="article-header">
         
-<article class="archive-article archive-type-_page">
-    <div class="archive-article-inner">
-        <header class="archive-article-header">
-            <a class="archive-article-link" href="/Resume/">Resume</a>
-            <span class="archive-article-date">
-                (<a class="article-date" href="/archives/2024/10">
-    
-    <time class="vm" datetime="2024-10-24T16:03:03.000Z" itemprop="datePublished">10/25</time>
-</a>
-)
-            </span>
-        </header>
-    </div>
-</article>
-    </li>
-
-    
-    
-
-    <li class="archive-section-item">
+        <h1 itemprop="name">
+            testtest
+        </h1>
         
-<article class="archive-article archive-type-_page">
-    <div class="archive-article-inner">
-        <header class="archive-article-header">
-            <a class="archive-article-link" href="/testtest/">testtest</a>
-            <span class="archive-article-date">
-                (<a class="article-date" href="/archives/2024/10">
+        <div class="article-meta clearfix">
+            <a class="article-date" href="https://lucien2712.github.io/testtest/index.html">
     
-    <time class="vm" datetime="2024-10-24T16:02:46.000Z" itemprop="datePublished">10/25</time>
+    <i class="icon-calendar vm"></i>
+    
+    <time class="vm" datetime="2024-10-24T16:02:46.000Z" itemprop="datePublished">2024-10-25</time>
 </a>
-)
-            </span>
-        </header>
-    </div>
-</article>
-    </li>
 
-    
-    
+            
 
-    <li class="archive-section-item">
+        </div>
+    </header>
+    
+    <section class="article-body markdown-body">
         
-<article class="archive-article archive-type-page">
-    <div class="archive-article-inner">
-        <header class="archive-article-header">
-            <a class="archive-article-link" href="/Introduction/">Introduction</a>
-            <span class="archive-article-date">
-                (<a class="article-date" href="/archives/2024/05">
-    
-    <time class="vm" datetime="2024-05-31T05:06:02.000Z" itemprop="datePublished">5/31</time>
-</a>
-)
-            </span>
-        </header>
-    </div>
-</article>
-    </li>
-
-    
-    
-
-    <li class="archive-section-item">
         
-<article class="archive-article archive-type-page">
-    <div class="archive-article-inner">
-        <header class="archive-article-header">
-            <a class="archive-article-link" href="/Project/">Project</a>
-            <span class="archive-article-date">
-                (<a class="article-date" href="/archives/2024/05">
-    
-    <time class="vm" datetime="2024-05-31T05:06:00.000Z" itemprop="datePublished">5/31</time>
-</a>
-)
-            </span>
-        </header>
-    </div>
+        
+    </section>
 </article>
-    </li>
-
-
-</ol></section>
 
 
 
@@ -233,6 +162,13 @@
             </div>
         </div>
 
+        
+            
+            <a id="pagenext" href="/Introduction/" class="article-next" title="Introduction"><i class="icon-arrow-right"></i></a>
+            
+            
+            <a id="pageprev" href="/Resume/" class="article-prev" title="Resume"><i class="icon-arrow-left"></i></a>
+            
         
 
         <footer class="footer">
@@ -306,6 +242,33 @@
         });
     });
     </script>
+    
+        
+<script src="/js/scrollspy.min.js"></script>
+
+        <script type="text/javascript">
+        $(document.body).scrollspy({target: '#aside-inner'});
+
+        $(window).on('resize', function() {
+            var hw = $('#header').width();
+            var ww = $('#wrapper').width();
+            var space = ($(this).width() - hw - ww) / 2 / 2;
+
+            var pageprev = $('#pageprev');
+            var pagenext = $('#pagenext');
+            var avg = (pageprev.width() + pagenext.width()) / 2
+
+            if(space > avg) {
+                var len = space - avg / 2;
+                var styles = {position: 'fixed', top: '50%', marginTop: - (pageprev.width() + pagenext.width()) / 4}
+                pageprev.css($.extend({left: hw + len}, styles));
+                pagenext.css($.extend({right: len}, styles));
+            } else {
+                pageprev.removeAttr('style');
+                pagenext.removeAttr('style');
+            }
+        }).trigger('resize');
+        </script>
     
 
 </body>
