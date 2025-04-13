@@ -1,259 +1,485 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
-    <meta charset="UTF-8" />
-
-    
-
-    
-
-    <title>Cheng-Yen Li&#39;s Page</title>
-    <meta name="author" content="Cheng-Yen Li" />
-    <meta name="keywords" content="" />
-    <meta name="description" content="" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
-
-    
-    <link rel="alternate" href="/atom.xml" title="Cheng-Yen Li&#39;s Page" type="application/atom+xml">
-    
-    
-    <link rel="icon" href="/images/avatar.jpg">
-    
-
-    <style type="text/css">
-    @font-face {
-        font-family: 'icomoon';
-        src: url("/fonts/icomoon.eot?q628ml");
-        src: url("/fonts/icomoon.eot?q628ml#iefix") format('embedded-opentype'),
-             url("/fonts/icomoon.ttf?q628ml") format('truetype'),
-             url("/fonts/icomoon.woff?q628ml") format('woff'),
-             url("/fonts/icomoon.svg?q628ml#icomoon") format('svg');
-        font-weight: normal;
-        font-style: normal;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cheng-Yen Li's Personal Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        :root {
+            --primary-color: #1e3a8a;
+            --secondary-color: #3b82f6;
+            --accent-color: #f97316;
+            --text-color: #1f2937;
+            --light-bg: #f1f5f9;
+            --white: #ffffff;
+            --light-gray: #e2e8f0;
+            --dark-gray: #64748b;
+            --box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--light-bg);
+            position: relative;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 30px auto;
+            background-color: var(--white);
+            box-shadow: var(--box-shadow);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: var(--white);
+            padding: 40px 0;
+            position: relative;
+        }
+        
+        .header-content {
+            display: flex;
+            align-items: center;
+            padding: 0 40px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid var(--white);
+            box-shadow: var(--box-shadow);
+            overflow: hidden;
+            background-color: var(--light-gray);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+        }
+        
+        .profile-img img {
+            width: 80%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+        
+        .profile-img i {
+            font-size: 80px;
+            color: var(--dark-gray);
+        }
+        
+        .header-text {
+            flex: 1;
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            font-weight: 300;
+            margin-bottom: 20px;
+            letter-spacing: 0.5px;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .contact-info a {
+            color: var(--primary-color);
+            background-color: rgba(255, 255, 255, 0.3);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            backdrop-filter: blur(5px);
+        }
+        
+        .contact-info a i {
+            margin-right: 5px;
+        }
+        
+        .contact-info a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+        
+        .wave {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 80px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z' fill='%23ffffff' opacity='.25'%3E%3C/path%3E%3Cpath d='M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z' fill='%23ffffff' opacity='.5'%3E%3C/path%3E%3Cpath d='M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z' fill='%23ffffff' opacity='.75'%3E%3C/path%3E%3C/svg%3E");
+            background-size: cover;
+        }
+        
+        main {
+            padding: 40px;
+        }
+        
+        section {
+            margin-bottom: 40px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        section:last-child {
+            margin-bottom: 0;
+        }
+        
+        h2 {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+            font-weight: 600;
+        }
+        
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--secondary-color), transparent);
+            border-radius: 3px;
+        }
+        
+        .section-content {
+            padding-left: 0;
+        }
+        
+        .edu-item, .project-item, .pub-item {
+            margin-bottom: 25px;
+            padding: 20px;
+            background-color: var(--light-bg);
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .edu-item:hover, .project-item:hover, .pub-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .edu-title, .project-title, .pub-title {
+            font-weight: 600;
+            color: var(--primary-color);
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+        
+        .date {
+            color: var(--accent-color);
+            font-style: italic;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+        
+        ul {
+            list-style-type: none;
+            padding-left: 5px;
+            margin-top: 10px;
+        }
+        
+        ul li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 8px;
+        }
+        
+        ul li:before {
+            content: "▹";
+            color: var(--secondary-color);
+            position: absolute;
+            left: 0;
+            font-size: 1rem;
+        }
+        
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .skill-category {
+            background-color: var(--light-bg);
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+        
+        .skill-category:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .skill-title {
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .skill-title i {
+            margin-right: 8px;
+            color: var(--secondary-color);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: var(--white);
+            font-size: 0.9rem;
+            position: relative;
+        }
+        
+        .footer-wave {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 50px;
+            transform: rotate(180deg);
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z' fill='%23f1f5f9' opacity='1'%3E%3C/path%3E%3C/svg%3E");
+            background-size: cover;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .social-links a {
+            color: var(--white);
+            background-color: rgba(255, 255, 255, 0.1);
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-3px);
+        }
+        
+        /* Animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .edu-item, .project-item, .pub-item, .skill-category {
+            animation: fadeInUp 0.5s ease forwards;
+            opacity: 0;
+        }
+        
+        .edu-item:nth-child(1) { animation-delay: 0.1s; }
+        .edu-item:nth-child(2) { animation-delay: 0.2s; }
+        .project-item:nth-child(1) { animation-delay: 0.3s; }
+        .project-item:nth-child(2) { animation-delay: 0.4s; }
+        .pub-item:nth-child(1) { animation-delay: 0.5s; }
+        .pub-item:nth-child(2) { animation-delay: 0.6s; }
+        .pub-item:nth-child(3) { animation-delay: 0.7s; }
+        .skill-category:nth-child(1) { animation-delay: 0.8s; }
+        .skill-category:nth-child(2) { animation-delay: 0.9s; }
+        
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+                padding: 20px;
+            }
+            
+            .profile-img {
+                margin-right: 0;
+                margin-bottom: 20px;
+                width: 150px;
+                height: 150px;
+            }
+            
+            .contact-info {
+                justify-content: center;
+            }
+            
+            main {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .subtitle {
+                font-size: 1rem;
+            }
+        }
     </style>
-    
-<link rel="stylesheet" href="/css/style.css">
-
-
-    <!--[if lt IE 9]><style type="text/css">.nav-inner {top:0;}.author-meta {position:static;top:0;}.search-form {height:36px;}</style><script type="text/javascript" src="https://unpkg.com/html5shiv@3.7.3/dist/html5shiv.min.js"></script><![endif]-->
-<meta name="generator" content="Hexo 7.2.0"></head>
+</head>
 <body>
-
-    <main class="app">
-        <header id="header" class="header clearfix">
-    <div id="nav" class="nav">
-    <div class="nav-mobile">
-        <button id="open-panel" class="open-panel nav-mobile-item"><i class="icon-documents"></i></button>
-        <h1 class="nav-mobile-title nav-mobile-item">Cheng-Yen Li&#39;s Page</h1>
-        <button id="open-menus" class="open-panel nav-mobile-item"><i class="icon-library"></i></button>
-    </div>
-
-    <nav id="nav-inner" class="nav-inner">
-        
-            <a class="nav-item active" href="/">
-                <span class="nav-text">Home</span>
-            </a>
-        
-    </nav>
-</div>
-
-    <aside id="aside" class="aside">
-    <div id="aside-mask" class="aside-mask"></div>
-    <div id="aside-inner" class="aside-inner">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit"><i class="icon-search-stroke"></i></button><input type="hidden" name="sitesearch" value="https://lucien2712.github.io"></form>
-
-        
-        
-
-        
-        <div class="author-meta">
-            
-            <div class="author-avatar">
-                <a href="/">
-                    <img src="/images/a.jpg" title="李承彥 Lucien Lee">
-                </a>
-            </div>
-            
-            <div class="author-name">李承彥 Lucien Lee</div>
-            <div class="author-work">MS @ NTU EECS DS</div>
-            <div class="author-location">
-                <i class="icon-location vm"></i>
-                <span class="vm">Taipei, Taiwan</span>
-            </div>
-            
-            <div class="author-thread-wrap">
-                <div class="author-threads clearfix">
-                    
-                        <a class="thread-item" href="https://github.com/lucien2712" target="_blank" rel="noopener">
-                            <!-- Generated by IcoMoon.io -->
-<svg viewBox="0 0 1024 1024" width="38" height="38" fill="currentColor">
-<path d="M512 32.12c-265.004 0-479.88 220.23-479.88 492.090 0 217.446 137.536 401.684 328.202 466.81 23.994 4.498 32.778-10.712 32.778-23.78 0-11.782-0.428-42.632-0.642-83.764-133.466 29.778-161.744-65.984-161.744-65.984-21.852-56.772-53.344-71.982-53.344-71.982-43.49-30.636 3.214-29.992 3.214-29.992 48.202 3.428 73.482 50.772 73.482 50.772 42.846 75.196 112.258 53.558 139.68 40.918 4.284-31.706 16.71-53.558 30.42-65.77-106.474-12.426-218.516-54.63-218.516-243.152 0-53.772 18.638-97.69 49.274-131.966-4.928-12.426-21.424-62.556 4.714-130.252 0 0 40.276-13.282 131.966 50.344 38.348-10.926 79.266-16.282 120.184-16.496 40.704 0.214 81.836 5.57 120.184 16.496 91.692-63.626 131.752-50.344 131.752-50.344 26.136 67.698 9.64 117.828 4.714 130.252 30.636 34.492 49.274 78.408 49.274 131.966 0 188.952-112.258 230.514-219.16 242.724 17.138 15.21 32.564 45.202 32.564 91.048 0 65.77-0.642 118.898-0.642 134.966 0 13.068 8.57 28.492 32.992 23.566 191.094-64.912 328.418-249.152 328.418-466.382 0-271.86-214.874-492.090-479.88-492.090z"></path>
-</svg>
-
-                        </a>
-                    
-                        <a class="thread-item" href="https://www.linkedin.com/in/cheng-yen-li/" target="_blank" rel="noopener">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
-                        </a>
-                    
-                        <a class="thread-item" href="mailto:2712cylee@gmail.com" target="_blank" rel="noopener">
-                            <!-- Generated by IcoMoon.io -->
-<svg viewBox="0 0 1024 1024" width="38" height="38" fill="currentColor">
-<path d="M512 0a512 512 0 1 0 0 1024A512 512 0 0 0 512 0zM256 256h512c9.152 0 17.984 1.984 26.176 5.632L512 590.784 229.824 261.632A62.848 62.848 0 0 1 256 256z m-64 448V320l0.128-4.032 187.648 218.944-185.6 185.6A61.888 61.888 0 0 1 192 704z m576 64H256c-5.632 0-11.2-0.768-16.512-2.176L421.632 583.68l90.432 105.472L602.496 583.68l182.144 182.144a61.888 61.888 0 0 1-16.512 2.176z m64-64c0 5.632-0.768 11.2-2.176 16.512l-185.6-185.6 187.648-218.944L832 320v384z"></path>
-</svg>
-
-                        </a>
-                    
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <div class="profile-img">
+                    <img src="image/Lucien.jpg" alt="Cheng-Yen Li">
+                </div>
+                <div class="header-text">
+                    <h1>Cheng-Yen Li</h1>
+                    <p class="subtitle">Machine Learning | Software Engineering | Firmware Engineering</p>
+                    <div class="contact-info">
+                        <a href="mailto:2712cylee@gmail.com"><i class="fas fa-envelope"></i> Email</a>
+                        <a href="tel:+886912248574"><i class="fas fa-phone"></i> +886 912248574</a>
+                        <a href="https://linkedin.com/in/Cheng-Yen-Li" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                        <a href="https://github.com/lucien2712" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                        <a href="CV/CV.pdf" download><i class="fas fa-file-download"></i>CV</a>
+                    </div>
                 </div>
             </div>
+            <div class="wave"></div>
+        </header>
+        
+        <main>
+            <section id="about">
+                <h2><i class="fas fa-user-circle"></i> About</h2>
+                <div class="section-content">
+                    <p>Experienced in machine learning and data science with proven track record in research and implementation. Demonstrated expertise through multiple published papers and industry collaborations. Seeking Software Engineering, Machine Learning, and Firmware Development roles.</p>
+                </div>
+            </section>
             
-        </div>
-        
-    </div>
-</aside>
-
-</header>
-
-        <div id="content" class="content">
-            <div id="wrapper" class="wrapper" style="max-width: 800px">
-                
-    <article class="article" itemscope itemprop="blogPost">
-    
-    <header class="article-header">
-        
-        <h1 itemprop="name">
-            <a href="/CV/">CV</a>
-        </h1>
-        
-        <div class="article-meta clearfix">
-            <a class="article-date" href="https://lucien2712.github.io/index.html">
-    
-    <i class="icon-calendar vm"></i>
-    
-    <time class="vm" datetime="2024-10-24T16:04:16.000Z" itemprop="datePublished">2024-10-25</time>
-</a>
-
+            <section id="education">
+                <h2><i class="fas fa-graduation-cap"></i> Education</h2>
+                <div class="section-content">
+                    <div class="edu-item">
+                        <div class="edu-title">National Taiwan University, MS in Data Science, College of Electrical Engineering and Computer Science</div>
+                        <div class="date"><i class="far fa-calendar-alt"></i> Sep 2024 – Present</div>
+                        <ul>
+                            <li>MIRLAB (Multimedia Information Retrieval Lab)</li>
+                            <li>GPA: 3.93/4.3</li>
+                            <li>Courses: Machine Learning, Information Retrieval and Extraction, Computer Vision Practice with Deep Learning</li>
+                            <li>Ongoing Courses: Natural Language Processing, Multimedia Security, High-Performance Big Data and Artificial Intelligence Systems</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="edu-item">
+                        <div class="edu-title">Soochow University, BS in Data Science</div>
+                        <div class="date"><i class="far fa-calendar-alt"></i> Sep 2020 – June 2024</div>
+                    </div>
+                </div>
+            </section>
             
-
-        </div>
-    </header>
-    
-    <section class="article-body markdown-body">
+            <section id="projects">
+                <h2><i class="fas fa-project-diagram"></i> Projects</h2>
+                <div class="section-content">
+                    <div class="project-item">
+                        <div class="project-title">Collect dialysis clinical data and establish a model of chronic kidney disease</div>
+                        <div class="date"><i class="far fa-calendar-alt"></i> Sep 2024 - Present</div>
+                        <ul>
+                            <li>Developing an end-to-end monitoring system for predicting Intradialytic Hypotension risk in dialysis patients, optimizing and balancing True Positive Rate and True Negative Rate to achieve optimal clinical effectiveness. A version of this system has already been deployed in the hospital.</li>
+                            <li>Collaborated with National Taiwan University Hospital</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="project-item">
+                        <div class="project-title">Revenue forecasting based on machine learning techniques</div>
+                        <div class="date"><i class="far fa-calendar-alt"></i> Nov 2023 - Dec 2024</div>
+                        <ul>
+                            <li>Applying ML techniques with expert forecasts for 6-month revenue prediction, achieving 1.5x performance improvement when incorporating expert input for the upcoming month.</li>
+                            <li>Collaborated with MediaTek Inc.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="publications">
+                <h2><i class="fas fa-book"></i> Publications</h2>
+                <div class="section-content">
+                    <div class="pub-item">
+                        <div class="pub-title">Establishment of an Automatic Crop Classification and Disease Detection System: Applied to Apple and Tomato Disease Detection</div>
+                        <div class="date"><i class="far fa-calendar-alt"></i> 2024</div>
+                        <p>Ming-Hsiang Su, Cheng-Yen Li</p>
+                        <p><i class="fas fa-journal-whills"></i> Journal of Advanced Technology and Management</p>
+                    </div>
+                    
+                    <div class="pub-item">
+                        <div class="pub-title">Named Entity Recognition for Chinese Healthcare Applications</div>
+                        <div class="date"><i class="far fa-calendar-alt"></i> 2023</div>
+                        <p>Cheng-Yen Li, Ming-Hsiang Su, Matus Pleva, Daniel Hládek, Yuan-Fu Liao</p>
+                        <p><i class="fas fa-microchip"></i> IEEE ICCE-TW 2023</p>
+                    </div>
+                    
+                    <div class="pub-item">
+                        <div class="pub-title">Deep Learning Technology and Ensemble Modeling for Text-Based Personality Trait Detection</div>
+                        <div class="date"><i class="far fa-calendar-alt"></i> 2023</div>
+                        <p>Cheng-Yen Li, Ming-Hsiang Su</p>
+                        <p><i class="fas fa-laptop-code"></i> 2023 DLT Digital Life Technology Conference</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="skills">
+                <h2><i class="fas fa-cogs"></i> Skills</h2>
+                <div class="section-content">
+                    <p><strong>Skills:</strong> Machine Learning, Deep Learning, Data Science, NLP, CV</p>
+                    <p><strong>Languages:</strong> Python, C, SQL</p>
+                </div>
+            </section>
+        </main>
         
-        <h1 id="Cheng-Yen-Li"><a href="#Cheng-Yen-Li" class="headerlink" title="Cheng-Yen Li"></a>Cheng-Yen Li</h1><h2 id="About"><a href="#About" class="headerlink" title="About"></a>About</h2><p>Experienced in machine learning and data science with proven track record in research and implementation. Demonstrated expertise through multiple published papers and industry collaborations. Seeking Software Engineering, Machine Learning, and Firmware Development roles.</p>
-<h2 id="Education"><a href="#Education" class="headerlink" title="Education"></a>Education</h2><p><strong>National Taiwan University</strong> (Sep 2024 – Present)<br>MS in Data Science, College of Electrical Engineering and Computer Science</p>
-<ul>
-<li>GPA: 3.93&#x2F;4.3</li>
-<li><strong>Courses:</strong> Machine Learning, Information Retrieval and Extraction, Computer Vision Practice with Deep Learning</li>
-</ul>
-<p><strong>Soochow University</strong> (Sep 2020 – June 2024)<br>BS in Data Science</p>
-<ul>
-<li><strong>Courses:</strong> Data Engineering, Big Data Analysis, Introduction to Machine Learning, Introduction to Artificial Intelligence</li>
-</ul>
-<h2 id="Projects"><a href="#Projects" class="headerlink" title="Projects"></a>Projects</h2><p><strong>Collect dialysis clinical data and establish a model of chronic kidney disease</strong> (Sep 2024 - Present)</p>
-<ul>
-<li>Developing an end-to-end monitoring system for predicting Intradialytic Hypotension risk in dialysis patients, optimizing and balancing True Positive Rate and True Negative Rate to achieve optimal clinical effectiveness. A version of this system has already been deployed in the hospital. </li>
-<li>Collaborated with National Taiwan University Hospital</li>
-</ul>
-<p><strong>Revenue forecasting based on machine learning techniques</strong> (Nov 2023 - Dec 2024)</p>
-<ul>
-<li>Applying ML techniques with expert forecasts for 6-month revenue prediction, achieving 1.5x performance improvement when incorporating expert input for the upcoming month. </li>
-<li>Collaborated with MediaTek Inc.</li>
-</ul>
-<h2 id="Publications"><a href="#Publications" class="headerlink" title="Publications"></a>Publications</h2><p><strong>Establishment of an Automatic Crop Classification and Disease Detection System: Applied to Apple and Tomato Disease Detection</strong> (2024)<br>Ming-Hsiang Su, <strong><em>Cheng-Yen Li</em></strong><br>Journal of Advanced Technology and Management</p>
-<p><strong>Named Entity Recognition for Chinese Healthcare Applications</strong> (2023)<br><strong><em>Cheng-Yen Li</em></strong>, Ming-Hsiang Su, Matus Pleva, Daniel Hládek, Yuan-Fu Liao<br>IEEE ICCE-TW 2023</p>
-<p><strong>Deep Learning Technology and Ensemble Modeling for Text-Based Personality Trait Detection</strong> (2023)<br><strong><em>Cheng-Yen Li</em></strong>, Ming-Hsiang Su<br>2023 DLT Digital Life Technology Conference</p>
-<h2 id="Technologies"><a href="#Technologies" class="headerlink" title="Technologies"></a>Technologies</h2><p><strong>Skills:</strong> Machine Learning, Deep Learning, Data Science, NLP, CV</p>
-<p><strong>Languages:</strong> Python, C, SQL</p>
-
-        
-    </section>
-</article>
-
-
-
-
-
-
+        <footer>
+            <div class="footer-wave"></div>
+            <div class="social-links">
+                <a href="https://linkedin.com/in/Cheng-Yen-Li" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/lucien2712" target="_blank"><i class="fab fa-github"></i></a>
             </div>
-        </div>
-
-        
-
-        <footer class="footer">
-    Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>, Theme by <a href="https://github.com/sanonz/hexo-theme-concise" target="_blank">Concise</a>
-
-    
-    <script>
-        var _hmt = _hmt || [];
-        (function () {
-            var hm = document.createElement("script");
-            hm.src = "https://hm.baidu.com/hm.js?e4027971a230b210f4671f485b33846a";
-            var s = document.getElementsByTagName("script")[0];
-            s.parentNode.insertBefore(hm, s);
-        })();
-    </script>
-    
-</footer>
-
-    </main>
-
-    <script type="text/javascript" src="https://unpkg.com/jquery@1.9.1/jquery.min.js"></script>
-    <script type="text/javascript">
-    $(function() {
-        var nodes = {
-            nav: $('#nav'),
-            aside: $('#aside'),
-            asideInner: $('#aside-inner'),
-            navInner: $('#nav-inner')
-        };
-
-        var doing = false;
-        nodes.asideInner.on('webkitAnimationEnd mozAnimationEnd oAnimationEnd oanimationend animationend', function() {
-            if (nodes.aside.hasClass('mobile-open')) {
-                nodes.aside.removeClass('mobile-open');
-            } else {
-                nodes.aside.removeClass('mobile-close panel-show');
-            }
-            doing = false;
-        });
-        $('#open-panel, #aside-mask').on('click', function() {
-            if (doing) {
-                return;
-            }
-
-            if (nodes.aside.hasClass('panel-show')) {
-                nodes.aside.addClass('mobile-close');
-            } else {
-                nodes.aside.addClass('mobile-open panel-show');
-            }
-        });
-        $('#open-menus').on('click', function() {
-            nodes.navInner.slideToggle('normal', slideDone);
-        });
-
-        if (window.innerWidth <= 960) {
-            setTimeout(function() {
-                nodes.navInner.slideUp('normal', slideDone);
-            }, 3000);
-        }
-
-        function slideDone() {
-            if (nodes.navInner.css('display') !== 'none') {
-                nodes.navInner.css('display', '');
-            }
-        }
-
-        $(window).on('resize', function() {
-            if ($(this).width() > 960) {
-                nodes.navInner.css('display', '');
-            }
-        });
-    });
-    </script>
-    
-
+            <p>&copy; 2024 Cheng-Yen Li. All rights reserved.</p>
+        </footer>
+    </div>
 </body>
 </html>
